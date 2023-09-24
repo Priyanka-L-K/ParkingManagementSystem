@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MavPark</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../common-css/common.css">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #87dddb8a;
+			font-family: Arial, sans-serif;
+			color: #333;
+			background:url('../images/photo2.avif') no-repeat;
+			background-position-x: center;
+    		background-position-y: center;
+    		background-size: 500px;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			/*background-color: black;*/
+			background-image: "simp.jpg";
+		}
+
+		.header {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.title {
+			font-size: 48px;
+			font-weight: bold;
+			color: #333;
+			text-shadow: 2px 2px 5px #ccc;
+		}
+
+		.abstract-design {
+			background-color: pink;
+			border-radius: 50%;
+			height: 300px;
+			width: 300px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0px 0px 15px #ccc;
+			/*background-color: #87dddb8a;*/
+			background:url('../images/parking (2).jpg') no-repeat;
+			background-position-x: center;
+    		background-position-y: center;
+    		background-repeat: no-repeat;
+    		background-size: 200px;
+		}
+
+		.abstract-design:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #ff9c00;
+			height: 200%;
+			width: 50%;
+			transform-origin: top left;
+			transform: skew(-45deg);
+		}
+
+		.abstract-design:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: #ff9c00;
+			height: 200%;
+			width: 50%;
+			transform-origin: top right;
+			transform: skew(45deg);
+		}
+
+		@media screen and (max-width: 480px) {
+			.title {
+				font-size: 36px;
+			}
+
+			.abstract-design {
+				height: 200px;
+				width: 200px;
+			}
+		}
+
+
+.ay{
+	margin-top: 300px;
+	padding: 25px;
+	margin-left: 86px;
+}
+.signup-btn, .login-btn {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #fc5a1b;
+			color: #fff;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+			text-align: center;
+			width: 250px;
+			align-self: center;
+		}
+		.signup-btn:hover, .login-btn:hover {
+			background-color: #0062cc;
+		}
+		@media only screen and (max-width: 767px) {
+			.title {
+				font-size: 36px;
+			}
+			.signup-btn, .login-btn {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+         <input id="nav-toggle" type="checkbox">
+            
+           
+                <ul class="main-links">
+                	<li><a href="../home-page/test3.html">Home</a></li>
+                    <li><a href="../about-us-page/about-us.html">About Us</a></li>
+                    <li><a href="../n_user/n_register.php">Register</a></li>
+                    <li><a href="../n_user/n_login.php">Sign In</a></li>
+                    <li><a href="../contact/contact-us.html">Contact</a></li>
+                </ul>
+                <label for="nav-toggle" class="burger-icon">
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                </label>
+               <a style="display: inline-block;
+			padding: 10px 10px;
+			background-color: #87ebe8f2;
+			color: black;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+			text-align: center;
+			width: 120px;
+			margin-top: 30px;
+			margin-left:200px;" href="../o_user/o_register.php">Rent your place</a> 
+        </nav>
+	<div class="container">
+		<div class="header">
+			<h1 class="title">MavPark</h1>
+		</div>
+
+<div class="ay">
+					<a href="../n_user/n_register.php" class="signup-btn">Register</a>
+					<a href="../n_user/n_login.php" class="login-btn">Log In</a>
+				</div>
+
+</body>
+</html>

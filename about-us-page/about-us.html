@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>About us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common-css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+.box-info{  
+    font-weight: bold; 
+    width: fit-content;
+    font-size: 20px; 
+    color: #E97730;
+    margin: 0 auto;
+    text-align: center;
+}
+.doc-container{
+    margin-top: 25px;
+}
+.doc-container h1{
+  font-size: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.newbox{
+    width: 100%;
+    display: flex;
+}
+.left-box{
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 14px 20px;   
+}
+.left-box p{
+    padding: 30px 20px;
+}
+.right-box{
+    float: right;
+    padding: 14px 20px;
+    width: 50%;
+}
+table{
+    margin-top: 17px;
+    text-align: center;
+    padding: 10px 10px;
+    border-collapse: collapse;
+    background-color: rgb(235, 247, 249);
+}
+td, th{
+    padding: 10px;
+    border: 1px solid black;
+}
+.doc-container p{
+    margin-top: 2px;
+} 
+ .doc-list{
+        display: flex;
+        position: relative;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+    }
+    .doctor-info{
+        background: #E97730; 
+  margin: 5px;
+  margin-bottom: 25px;
+  width: 300px;
+  padding: 20px;
+  line-height: 25px;
+  color: black;  
+  position: relative;
+    }
+    .doctor-content{
+        margin-top: 40px;
+    }
+    .doc-image{
+        position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+    }
+    img{
+        width: 100px;
+  height: 100px;
+  padding: 2px;
+    }
+
+    @media screen and (max-width: 550px) {
+	.newbox{
+        flex-wrap: wrap;
+    }
+    .right-box, .left-box{
+        width: 100%;
+    }
+}
+
+
+main {
+  padding: 40px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #555;
+  text-align: center;
+}
+
+.about p {
+  max-width: 800px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+footer {
+  background-color: #555;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+    </style>
+</head>
+    <body>
+        <nav>
+            <input id="nav-toggle" type="checkbox">
+            <a class="logo" href="../home-page/test3.html"><h2>MavPark</h2> 
+            </a>
+                   <ul class="main-links">
+                    <li><a href="../home-page/test3.html">Home</a></li>
+                    <li><a href="../about-us-page/about-us.html">About Us</a></li>
+                    <li><a href="../register/sumne.html">Register</a></li>
+                    <li><a href="../register/sumnelogin.html">Sign In</a></li>
+                    <li><a href="../contact/contact-us.html">Contact</a></li>
+                   </ul>
+                   <label for="nav-toggle" class="burger-icon">
+                     <div class="h-line"></div>
+                     <div class="h-line"></div>
+                     <div class="h-line"></div>
+                     <div class="h-line"></div>
+                   </label>
+           </nav>
+     <!--    <section>
+            <div class="newbox">
+                <div class="left-box">
+                    <div class="box-info">Our Number One Priority is your Health</div>
+                    <p>
+                        Our goal is to provide first-class care, utilizing the most advanced technology while maintaining a warm and sincere dedication to our patients. The result of our seamless and specialized team approach is clearly reflected in our patient’s excellent outcomes.
+                        Our physicians, with the support of an accomplished staff, have been, and continue to be, outstanding in the field of eye care, consistently recognized and honored as among the most skilled ophthalmic surgeons and optometrists in the nation. It is for this reason, Paragon Eye Associates is considered to be one of the finest eye care practices.
+                    </p>
+                </div>
+                <div class="right-box">
+                    <div class="box-info">Our Honours and Achievements...<span><i class="fa fa-trophy" aria-hidden="true"></i></span></div>
+                    <table>
+                        <tr>
+                            <th>Year</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>First Eye Hospital in USA to be accredited by Joint Commission International, for excellence in patient care and healthcare delivery.</td>
+                        </tr>
+                        <tr>
+                            <td>2017</td>
+                            <td>First Eye Hospital in USA to use the World’s fastest laser – The Wavelight Concerto 500 Hz – to remove spectacle numbers.</td>
+                        </tr>
+                        <tr>
+                            <td>2010</td>
+                            <td>Started Phacoemulsification cataract surgery and Laser Photocoagulation.</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </section> -->
+      <!--   <section>
+             <div class="doc-container"> 
+                <h1>World Class
+                    Doctors Helping You See the World Through Better Eyes
+                    </h1>
+                <div class="doc-list">
+                  <div class="doctor-info">
+                      <img class="doc-image" src="../images/doc1.jpg">
+                      <div class="doctor-content">
+                        <h3>Dr Sharon Edwards, OD</h3>   
+                        <p>She completed externships in Corneal Ocular Disease in Dallas, Texas. She is currently a licensed Therapeutic Optometrist.</p>                
+                        <p>Email : sharon@utaeye.com</p>
+                    </div>
+                    </div>
+                  <div class="doctor-info">
+                      <img class="doc-image" src="../images/doc2.jpeg">
+                      <div class="doctor-content">
+                    <h3>Dr Paul Doe</h3>   
+                    <p>Completed MBBS and DO from NTR Health University in 2009. Fellowship in Medical Retina, Cataract and Phaco respectively from 2009 to 2011.</p>
+                    <p>Email : paul@utaeye.com</p>
+                </div>
+                </div>
+                  <div class="doctor-info">
+                      <img class="doc-image" src="../images/doc3.jpg">
+                      <div class="doctor-content">
+                    <h3>Dr Tex Cole, OD</h3>
+                    <p>Dr. Tex Cole is a co-founder of 1st Eye Care. He is a licensed Therapeutic Optometrist treating eye diseases and providing dry eye care.</p>
+               <p>Email : tex@utaeye.com</p>
+                </div>
+                </div>
+                    <div class="doctor-info">
+                      <img class="doc-image" src="../images/doc4.jpg">
+                      <div class="doctor-content">
+                    <h3>Dr Alex Wood</h3>
+                    <p>He completed Graduation from Rangaraya Medical College and completed Fellowship in IOL from Sankara Eye Institute, Guntur.</p>
+                    <p>Email : alex@utaeye.com</p>
+                </div>
+                </div>
+                </div>
+             </div>
+        </section> -->
+        <!-- <section class="footer" id="contact-info">
+            <h4>Open Hours : </h4>
+            <p>Monday - Friday : 08:30 A.M - 6 P.M.  Saturday - Sunday Closed</p>
+            <p>Connect with us on : </p>
+            <span class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google-plus"></i>
+            </span>
+            <p>copyright &copy; 2022 UTA eye clinic. </p>
+        </section> -->
+
+
+        <main>
+    <section class="about">
+      <h1>About Us</h1>
+      <p>MavPark is a company that is committed to making parking easy and convenient for everyone. Our goal is to provide our customers with a seamless parking experience that saves them time and hassle.</p>
+      <p>With our user-friendly app and cutting-edge technology, you can reserve a parking spot in advance, pay for parking on the go, and receive real-time updates on available spots. We are dedicated to making parking stress-free and enjoyable for all.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 PriyankaLakur. All rights reserved.</p>
+  </footer>
+    </body>
+</html>

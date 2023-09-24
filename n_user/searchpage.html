@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profile</title>
+	<link rel="stylesheet" href="stylepe.css">
+	<link rel="stylesheet" href="../common-css/common.css">
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+		font-family: sans-serif;
+		box-sizing: border-box;
+	}
+	.hero{
+		width: 100%;
+		min-height: 100%;
+		background: #eceaff;
+		color: #525252;
+	}
+	nav{
+		/*background: #1a1a1a;*/
+		width: 100%;
+		padding: 10px 10%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+	}
+	.logo{
+		width: 120px;
+	}
+	.user-pic{
+		width: 40px;
+		border-radius: 50%;
+		cursor: pointer;
+		margin-left: 30px;
+	}
+	nav ul li{
+		display: inline-block;
+		list-style: none;
+		margin: 10px 20px;
+	}
+	nav ul li a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.sub-menu-wrap{
+		position: absolute;
+		top: 100%;
+		right: 10%;
+		width: 270px;
+		max-height: 0px;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		/*background-color: black;*/
+	}
+	.sub-menu-wrap.open-menu{
+		max-height: 400px;
+	}
+
+	.sub-menu{
+		background: #fff;
+		padding: 20px;
+		margin: 10px; 
+		/*width: 40px; */
+	}
+	.user-info{
+		display: flex;
+		align-items: center;
+	}
+	.user-info h3{
+		font-weight: 500;
+	}
+	.user-info img{
+		width: 60px;
+		border-radius: 50%;
+		margin-right: 15px;
+	}
+	.sub-menu hr{
+		border:0;
+		height: 1px;
+		width: 100%;
+		/*background: #ccc;*/
+		margin: 15px 0 10px;
+	}
+
+	.sub-menu-link{
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: #525252;
+		margin: 12px 0;
+	}
+	.sub-menu-link p{
+		width: 100%;
+	}
+	.sub-menu-link img{
+		width: 40px;
+		background: #e5e5e5;
+		border-radius: 50%;
+		padding: 8px;
+		margin-right: 15px; 
+	}
+	.sub-menu-link span{
+		font-size: 22px;
+		transition: transform 0.5s;
+	}
+	.sub-menu-link  hover span{
+		transform: translateX(5px);
+	}
+
+	.sub-menu-link:hover p{
+		font-weight: 600;
+	}
+
+
+	main.cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;/*
+    background: #eceaff;*/
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 250px;
+    height: 250px;
+    margin-top: -40px;
+    margin-left: -50px;
+    margin-bottom: -130px;
+}
+
+main.cards section.card img {
+    width: 300px;
+    margin-top: 30px;
+}
+
+main.cards section.card h3 {
+    font-size: 100%;
+    margin-top: 70px;
+    margin-bottom: 5px;
+    background-color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-color: black;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+    text-decoration: none;
+}
+
+main.cards section.card.contact {
+    /*background-image: url("../images/parkinglot.jpg");*/
+    background-size: 350px;
+    border-color: black;
+    border-style: dashed;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+main.cards section.card.about {
+    /*background-image: url("../images/bookparking.jpg");*/
+    background-size: 350px;
+    border-color: black;
+    border-style: dashed;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+.button {
+    /*background: linear-gradient(to right, #FE5F8F, #FFC7D9);*/
+    background-color: #fc5a1b;
+}
+
+main.cards section.card.about.button {
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+
+/*main.cards section.card.contact {
+    box-shadow: 20px 20px 50px -30px #DBC4FF;
+}*/
+
+@media screen and (max-width: 720px) {
+    main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    .button {
+        font-size: 70%;
+    }
+
+}
+
+footer {
+  background-color: #555;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+</style>
+<body>
+	<div class="hero">
+		<nav>
+			<!-- <img src="images/logo.png" class="logo"> -->
+			<input id="nav-toggle" type="checkbox">
+            <a class="logo" href="#" style="text-align: center; margin-left:70px;"><h2>MavPark</h2> 
+            </a>
+           
+                <ul class="main-links">
+                    <li><a href="dashhome.php">Dashboard</a></li>
+                    <li><a href="manage_vehicles.php">Add Vehicle</a></li>
+                    <li><a href="n_helps.html">Help & Support</a></li>
+                </ul>
+                <label for="nav-toggle" class="burger-icon">
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                </label>
+
+			<img src="../images/user.png" class="user-pic" onclick="toggleMenu()">
+
+			<div class="sub-menu-wrap" id="subMenu">
+				<div class="sub-menu">
+					<div class="user-info">
+						<img src="../images/user.png">
+						<h3><?php echo "$_SESSION[username]"; ?></h3>
+					</div>
+					<hr>
+
+					<!-- <a href="#" class="sub-menu-link"> -->
+						<!-- <img src="../images/profile.png"> -->
+						<!-- <p><a style="text-decoration: none; color: #525252;
+						" href="../Dashboard/dashhome.html">My Profile</a></p>
+					</a> -->
+
+					<a href="#" class="sub-menu-link">
+						<!-- <img src="../images/logout.png"> -->
+						<p><a style="text-decoration: none; color: #525252;
+						" href="../home-page/test3.html">Logout</a></p>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+
+	<main class="cards">
+        <section class="card contact">
+            <div class="icon">
+                <img src="../images/parkinglot.jpg" alt="Contact us.">
+            </div>
+            <h3>Search a Public Parking Spot!</h3>
+            <!-- <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span> -->
+            <a href="searchspot.php" class="button">Search</a>
+        </section>
+        <section class="card about">
+            <div class="icon">
+                <img src="../images/bookparking.jpg" alt="About us.">
+            </div>
+            <h3>Rent a Parking Spot!</h3>
+            <!-- <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span> -->
+            <a href="rentslotsearch.php" class="button">Search</a>
+        </section>
+    </main>
+
+
+<footer>
+    <p>&copy; 2023 PriyankaLakur. All rights reserved.</p>
+  </footer>
+
+<script type="text/javascript">
+	let subMenu = document.getElementById("subMenu");
+
+	function toggleMenu(){
+		subMenu.classList.toggle("open-menu");
+	}
+</script>
+
+</body>
+</html>

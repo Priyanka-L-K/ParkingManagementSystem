@@ -1,0 +1,138 @@
+
+/* middle section */
+.background-img{
+  width: 100%;
+  min-height: 100vh;
+  /* filter: opacity(80%); */
+   background-image: url(../images/backgroundimg.jpg); 
+  /*background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(4, 4, 5, 0.7)), url(../images/backgroundimg.jpg);*/
+  background-position: center;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0.8;
+}
+.home-text{
+  margin-top: 35px;
+  color: black;
+  position:absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-30%,-50%);
+  text-align: center;
+  z-index: 1;
+  background-color: opacity;
+}
+.home-text h1{
+  font-size: 58px;
+}
+.home-text p{
+  margin: 10px 0 40px;
+  font-size: 18px;
+}
+
+.section-text{
+  text-align: center;
+  padding: 15px;
+}
+
+  /* flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px; */
+
+/*last section*/
+.container{
+  padding: 0 60px;
+  flex-direction: row;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card{
+  height: 230px;
+  width: 350px;
+  margin: 0 30px;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.card:hover{
+  height: 300px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+.card .img{
+  height: 200px;
+  width: 100%;
+}
+.card .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(8px 8px 10px gray);
+}
+.card .top-text{
+  padding: 5px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #202020;
+}
+.card .top-text p{
+  font-size: 20px;
+  font-weight: 600;
+  color: #E97730; 
+  line-height: 20px;
+}
+.card .btm-text{
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+.card:hover .btm-text{
+  opacity: 1;
+  visibility: visible;
+}
+.card .btm-text .text{
+  text-align: justify;
+}
+.card .btm-text{
+  margin: 10px 0;
+  text-align: left;
+}
+.card .btm-text a{
+  text-decoration: none;
+  background: #e74c3c;
+  color: #f2f2f2;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2s;
+}
+.card .btm-text a:hover{
+  transform: scale(0.9);
+}
+/* 978 */
+@media screen and (max-width: 978px) {
+  .container{
+    flex-wrap: wrap;
+    /* padding: 0 120px; */
+    justify-content: center;
+   
+  }
+  .home-text h1{
+      font-size: 38px;
+  }
+  .card{
+    max-width: 700px;
+    margin: 20px 6px;
+  }
+  .background-img{
+    background-size: 800px;
+  }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="../common-css/common.css">
+</head>
+<style>
+  /* Global styles */
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  .hero{
+    width: 100%;
+    min-height: 100%;
+    background: #eceaff;
+    color: #525252;
+  }
+  nav{
+    /*background: #1a1a1a;*/
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .logo{
+    width: 120px;
+  }
+  .user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  nav ul li a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  .sub-menu-wrap.open-menu{
+    max-height: 400px;
+  }
+
+  .sub-menu{
+    background: #fff;
+    padding: 20px;
+    margin: 10px; 
+    /*width: 40px; */
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+  }
+  .user-info h3{
+    font-weight: 500;
+  }
+  .user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .sub-menu hr{
+    border:0;
+    height: 1px;
+    width: 100%;
+    /*background: #ccc;*/
+    margin: 15px 0 10px;
+  }
+  .sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+  }
+  .sub-menu-link p{
+    width: 100%;
+  }
+  .sub-menu-link img{
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px; 
+  }
+  .sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+    background-color: #87dddb8a;
+  }
+  .sub-menu-link span a{
+    
+    background-color: #87dddb8a;
+  }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form styles */
+form {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  width: 90%;
+}
+
+/*h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}*/
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  border: 1px solid #ccc
+  border-radius: 3px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Responsive styles */
+</style>
+<body>
+
+<div class="hero">
+    <nav>
+      <!-- <img src="images/logo.png" class="logo"> -->
+      <input id="nav-toggle" type="checkbox">
+            <!-- <a class="logo" href="../home-page/test3.html" style="text-align: center; margin-left:70px;"><h2>MavPark</h2> 
+            </a> -->
+
+            <a class="logo" href="../Dashboardowner/spotregisttration2.html" style="text-align: center; margin-left:70px;"><h2>MavPark</h2> 
+            </a>
+           
+                <ul class="main-links">
+                    <li><a href="../Dashboard/dashhome.html">Dashboard</a></li>
+                    <li><a href="../Dashboard/searchpark.html">Search Parking</a></li>
+                    <li><a href="../Dashboard/addvehicle.html">Add Vehicle</a></li>
+                    <li><a href="../Dashboard/helps.html">Help & Support</a></li>
+                </ul>
+                <label for="nav-toggle" class="burger-icon">
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                </label>
+
+      <img src="../images/user.png" class="user-pic" onclick="toggleMenu()">
+
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../images/user.png">
+            <h3>James</h3>
+          </div>
+          <hr>
+
+          <a href="#" class="sub-menu-link">
+            <!-- <img src="../images/profile.png"> -->
+            <p><a style="text-decoration: none; color: #525252;
+            " href="../Dashboard/dashhome.html">My Profile</a></p>
+          </a>
+
+          <a href="#" class="sub-menu-link">
+            <!-- <img src="../images/logout.png"> -->
+            <p><a style="text-decoration: none; color: #525252;
+            " href="../home-page/test3.html">Logout</a></p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+<div style="font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; font-weight: 700; margin-top: 20px;">Parking Space Registration</div>
+  <form action="../Dashboardowner/location1.html" method="post">
+    <!-- <div style="font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; font-weight: 700">Parking Space Registration</div> -->
+    
+    <div class="input-group">
+      <label for="name">Hourly rate</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+  <button id="clickMe" type="submit">Submit</button>
+  </form>
+<script type="text/javascript">
+  let subMenu = document.getElementById("subMenu");
+
+  function toggleMenu(){
+    subMenu.classList.toggle("open-menu");
+  }
+</script>
+<script>
+      var button = document.getElementById("clickMe");
+      button.addEventListener("click", function() {
+        alert("Parking Space registered!");
+      });
+    </script>
+</body>
+</html>

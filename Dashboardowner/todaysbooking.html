@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Parking App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../common-css/common.css">
+    <style>
+      *{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  .hero{
+    width: 100%;
+    min-height: 100%;
+    background: #eceaff;
+    color: #525252;
+  }
+  nav{
+    /*background: #1a1a1a;*/
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .logo{
+    width: 120px;
+  }
+  .user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  nav ul li a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  .sub-menu-wrap.open-menu{
+    max-height: 400px;
+  }
+
+  .sub-menu{
+    background: #fff;
+    padding: 20px;
+    margin: 10px; 
+    /*width: 40px; */
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+  }
+  .user-info h3{
+    font-weight: 500;
+  }
+  .user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .sub-menu hr{
+    border:0;
+    height: 1px;
+    width: 100%;
+    /*background: #ccc;*/
+    margin: 15px 0 10px;
+  }
+  .sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+  }
+  .sub-menu-link p{
+    width: 100%;
+  }
+  .sub-menu-link img{
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px; 
+  }
+  .sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+    background-color: #87dddb8a;
+  }
+  .sub-menu-link span a{
+    
+    background-color: #87dddb8a;
+  }
+      /* Responsive styles */
+      @media screen and (max-width: 768px) {
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+        }
+        .user-icons {
+          display: none;
+        }
+        .back-button {
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 24px;
+          margin: 20px;
+        }
+        .table-container {
+          overflow-x: auto;
+        }
+        table {
+          width: 100%;
+          font-size: 14px;
+        }
+        th, td {
+          padding: 10px;
+        }
+        .status-button {
+          font-size: 12px;
+        }
+      }
+      .table-container {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+    <nav>
+      <!-- <img src="images/logo.png" class="logo"> -->
+      <input id="nav-toggle" type="checkbox">
+            <a class="logo" href="../home-page/home.html" style="text-align: center; margin-left:70px;"><h2>MavPark</h2> 
+            </a>
+           
+                <ul class="main-links">
+                    <li><a href="../Dashboardowner/dashhome.html">Dashboard</a></li>
+                    <!-- <li><a href="../Dashboardowner/searchpark.html"></a></li>
+                    <li><a href="../Dashboardowner/addvehicle.html">Add Vehicle</a></li> -->
+                    <li><a href="../Dashboardowner/helps.html">Help & Support</a></li>
+                </ul>
+                <label for="nav-toggle" class="burger-icon">
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                </label>
+
+      <img src="../images/user.png" class="user-pic" onclick="toggleMenu()">
+
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../images/user.png">
+            <h3>James</h3>
+          </div>
+          <hr>
+
+          <a href="#" class="sub-menu-link">
+            <!-- <img src="../images/profile.png"> -->
+            <p><a style="text-decoration: none; color: #525252;
+            " href="../Dashboard/dashhome.html">My Profile</a></p>
+          </a>
+
+          <a href="#" class="sub-menu-link">
+            <!-- <img src="../images/logout.png"> -->
+            <p><a style="text-decoration: none; color: #525252;
+            " href="../home-page/test3.html">Logout</a></p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <input style="background-color: #333;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 59px;
+  margin-bottom: 20px;" type="button" value="Back" onclick="history.back()">
+  <div class="container">
+  <h1>Today's Reservations</h1>
+  </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contact Number</th>
+            <th>Vehicle Type and Model</th>
+            <th>Vehicle Number</th>
+            <th>Reserved Date</th>
+            <th>Reserved Parking Start Time</th>
+            <th>Reserved Parking End Time</th>
+            <th>Fees</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>1234567890</td>
+            <td>Sedan - Toyota Corolla</td>
+            <td>ABC 123</td>
+            <td>2023-03-11</td>
+            <td>10:00 AM</td>
+            <td>12:00 PM</td>
+            <td>$10</td>
+            <td><button class="status-button" onclick="alert('Currently Parked')">Status</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>0987654321</td>
+            <td>SUV - Ford Explorer</td>
+            <td>XYZ 789</td>
+            <td>2023-03-12</td>  
+            <td>2:00 PM</td>
+            <td>4:00 PM</td>
+            <td>$15</td>
+            <td><button class="status-button" onclick="alert('Reserved')">Status</button></td>
+          </tr>
+          <tr>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="text/javascript">
+  let subMenu = document.getElementById("subMenu");
+
+  function toggleMenu(){
+    subMenu.classList.toggle("open-menu");
+  }
+</script>
+
+</body>
+</html>

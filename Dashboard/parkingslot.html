@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Search Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../common-css/common.css">
+</head>
+<style type="text/css">
+	body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  /*text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+  background-image: linear-gradient(45deg, #6fc3df, #c4e0e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+
+}
+
+form {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+input[type="text"] {
+	padding: 10px;
+	border-width: 3px;
+	border-radius: 5px;
+	flex: 1;
+	width: 270px;
+}
+
+button[type="submit"] {
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	form {
+		flex-direction: column;
+	}
+}
+
+	*{
+		margin:0;
+		padding: 0;
+		font-family: sans-serif;
+		box-sizing: border-box;
+	}
+	.hero{
+		width: 100%;
+		min-height: 100%;
+		background: #eceaff;
+		color: #525252;
+	}
+	nav{
+		/*background: #1a1a1a;*/
+		width: 100%;
+		padding: 10px 10%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+	}
+	.logo{
+		width: 120px;
+	}
+	.user-pic{
+		width: 40px;
+		border-radius: 50%;
+		cursor: pointer;
+		margin-left: 30px;
+	}
+	nav ul li{
+		display: inline-block;
+		list-style: none;
+		margin: 10px 20px;
+	}
+	nav ul li a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.sub-menu-wrap{
+		position: absolute;
+		top: 100%;
+		right: 10%;
+		width: 270px;
+		max-height: 0px;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		/*background-color: black;*/
+	}
+	.sub-menu-wrap.open-menu{
+		max-height: 400px;
+	}
+
+	.sub-menu{
+		background: #fff;
+		padding: 20px;
+		margin: 10px; 
+		/*width: 40px; */
+	}
+	.user-info{
+		display: flex;
+		align-items: center;
+	}
+	.user-info h3{
+		font-weight: 500;
+	}
+	.user-info img{
+		width: 60px;
+		border-radius: 50%;
+		margin-right: 15px;
+	}
+	.sub-menu hr{
+		border:0;
+		height: 1px;
+		width: 100%;
+		/*background: #ccc;*/
+		margin: 15px 0 10px;
+	}
+	.sub-menu-link{
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: #525252;
+		margin: 12px 0;
+	}
+	.sub-menu-link p{
+		width: 100%;
+	}
+	.sub-menu-link img{
+		width: 40px;
+		background: #e5e5e5;
+		border-radius: 50%;
+		padding: 8px;
+		margin-right: 15px; 
+	}
+	.sub-menu-link span{
+		font-size: 22px;
+		transition: transform 0.5s;
+	}
+	.sub-menu-link: hover span{
+		transform: translateX(5px);
+	}
+	.sub-menu-link:hover p{
+		font-weight: 600;
+	}
+
+
+	
+
+</style>
+
+<body>
+<body>
+	<div class="hero">
+		<nav>
+			<!-- <img src="images/logo.png" class="logo"> -->
+			<input id="nav-toggle" type="checkbox">
+            <a class="logo" href="../home-page/home.html" style="text-align: center; margin-left:70px;"><h2>MavPark</h2> 
+            </a>
+           
+                <ul class="main-links">
+                    <li><a href="../about-us-page/about-us.html">Dashboard</a></li>
+                    <li><a href="../Dashboard/searchpark.html">Search Parking</a></li>
+                    <li><a href="../Dashboard/addvehicle.html">Add Vehicle</a></li>
+                    <li><a href="../Dashboard/helps.html">Help & Support</a></li>
+                </ul>
+                <label for="nav-toggle" class="burger-icon">
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                  <div class="h-line"></div>
+                </label>
+
+			<img src="../images/user.png" class="user-pic" onclick="toggleMenu()">
+
+			<div class="sub-menu-wrap" id="subMenu">
+				<div class="sub-menu">
+					<div class="user-info">
+						<img src="../images/user.png">
+						<h3>James</h3>
+					</div>
+					<hr>
+
+					<a href="#" class="sub-menu-link">
+						<!-- <img src="../images/profile.png"> -->
+						<p><a style="text-decoration: none; color: #525252;
+						" href="../Dashboard/dashhome.html">My Profile</a></p>
+					</a>
+
+					<a href="#" class="sub-menu-link">
+						<!-- <img src="../images/logout.png"> -->
+						<p><a style="text-decoration: none; color: #525252;
+						" href="../Dashboard/dashhome.html">Logout</a></p>
+					</a>
+
+
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+	<h1>Let's find you a Public Parking Spot!</h1>
+	</div>
+	<section>
+		<form>
+			<input type="text" placeholder="Search...">
+			<button type="submit"><i class="fa fa-search"></i><a style="text-decoration: none; color: white" href="../Dashboard/dummysearches.html">Search</button>
+		</form>
+	</section>
+
+	<script type="text/javascript">
+	let subMenu = document.getElementById("subMenu");
+
+	function toggleMenu(){
+		subMenu.classList.toggle("open-menu");
+	}
+</script>
+</body>
+</html>
